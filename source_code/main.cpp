@@ -28,6 +28,11 @@ int main() {
         std::cout << "What kind of list do you want to sort (enter 1, 2, 3, 4, 0)? ";
         std::cin >> vecType;
         std::cout << '\n';
+
+        if (vecType == 0) {
+            std::cout << ":(" << '\n' << '\n';
+        }
+
         if (vecType != 0) {                                 //Checks to see if the user quits
             std::cout << "--------------------------------------------------------------------------------------------" << '\n' << '\n';;
         }
@@ -94,7 +99,7 @@ int main() {
                 for(unsigned int i = 0; i < input_length; i++) {                //for loop prints the sorted array;
                     std::cout << a[i] << ' ';
                 }
-                std::cout << '\n';
+                std::cout << '\n' << '\n';
                 std::cout << std::fixed << std::setprecision(4) << "The merge sort algorithm took " << ((double)t)/CLOCKS_PER_SEC << " seconds" << '\n' << '\n'; // prints out the time merge sort algorithim took
             }
             else if (sort_algorithm == 4){      //Radix sort Code
@@ -176,7 +181,7 @@ int main() {
                 for(unsigned int i = 0; i < input_length; i++) {                //for loop prints the sorted array;
                     std::cout << a[i] << ' ';
                 }
-                std::cout << '\n';
+                std::cout << '\n' << '\n';
                 std::cout << std::fixed << std::setprecision(4) << "The merge sort algorithm took " << ((double)t)/CLOCKS_PER_SEC << " seconds" << '\n' << '\n'; // prints out the time merge sort algorithim took
             }
 
@@ -254,7 +259,7 @@ int main() {
                 for(unsigned int i = 0; i < input_length; i++) {                //for loop prints the sorted array;
                     std::cout << a[i] << ' ';
                 }
-                std::cout << '\n';
+                std::cout << '\n' << '\n';
                 std::cout << std::fixed << std::setprecision(4) << "The merge sort algorithm took " << ((double)t)/CLOCKS_PER_SEC << " seconds" << '\n' << '\n'; // prints out the time merge sort algorithim took
             }
 
@@ -331,7 +336,7 @@ int main() {
                 for(unsigned int i = 0; i < input_length; i++) {                //for loop prints the sorted array;
                     std::cout << a[i] << ' ';
                 }
-                std::cout << '\n';
+                std::cout << '\n' << '\n';
                 std::cout << std::fixed << std::setprecision(4) << "The merge sort algorithm took " << ((double)t)/CLOCKS_PER_SEC << " seconds" << '\n' << '\n'; // prints out the time merge sort algorithim took
             }
 
@@ -345,9 +350,6 @@ int main() {
 
                 Object.printList(input_length);
                 std::cout << std::fixed << std::setprecision(4) << "The radix sort algorithm took " << ((double)t)/CLOCKS_PER_SEC << " seconds" << '\n' << '\n';
-            }
-            else if (sort_algorithm == 0) {
-
             }
 
             //Object.printList(input_length);
